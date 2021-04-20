@@ -1,3 +1,5 @@
+package com.example.testspringmavenproblem.classestotest;
+
 public class User {
 
     private String password;

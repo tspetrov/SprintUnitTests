@@ -1,3 +1,5 @@
+package com.example.testspringmavenproblem.classestotest;
+
 public class Car {
 
     int carWeight = 1000;

@@ -1,3 +1,9 @@
+package com.example.testspringmavenproblem.classestotesttests;
+
+import com.example.testspringmavenproblem.classestotest.SecurityService;
+import com.example.testspringmavenproblem.classestotest.User;
+import com.example.testspringmavenproblem.classestotest.UserDAO;
+import com.example.testspringmavenproblem.classestotest.UserServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;

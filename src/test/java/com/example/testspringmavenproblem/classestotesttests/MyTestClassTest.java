@@ -1,3 +1,5 @@
+package com.example.testspringmavenproblem.classestotesttests;
+
 import com.example.testspringmavenproblem.classestotest.MyTestClass;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
