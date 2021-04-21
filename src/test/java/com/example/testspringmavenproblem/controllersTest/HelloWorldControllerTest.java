@@ -17,6 +17,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 //web mvc test annotation for controller testing
 @SpringBootTest
@@ -26,8 +27,10 @@ class HelloWorldControllerTest {
     @Autowired
     private WebApplicationContext webApplicationContext;
 
-
-
+    // using matchers -
+    //     .andExpect(status().isOk())
+    //            .andExpect(content().string("Hello World"))
+    //
     @Test
     public void helloWorld_basic() throws Exception {
 
@@ -36,10 +39,13 @@ class HelloWorldControllerTest {
         RequestBuilder request = MockMvcRequestBuilders
                 .get("/hello-world")
                 .accept(MediaType.APPLICATION_JSON);
-        MvcResult mvcResult = mockMvc.perform(request).andReturn();
+        MvcResult mvcResult = mockMvc.perform(request)
+                .andExpect(status().isOk())
+                .andExpect(content().string("Hello World"))
+                .andReturn();
 
         //verify "Hello World"
-        assertEquals("Hello World", mvcResult.getResponse().getContentAsString());
+        //assertEquals("Hello World", mvcResult.getResponse().getContentAsString());
     }
 
 }
