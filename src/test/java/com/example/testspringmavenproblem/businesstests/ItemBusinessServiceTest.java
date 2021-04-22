@@ -24,7 +24,7 @@ class ItemBusinessServiceTest {
     ItemRepository itemRepo;
 
     @InjectMocks
-    ItemBusinessService itemBusinessService = new ItemBusinessService();
+    ItemBusinessService itemBusinessService ;
 
     @Test
     void retrieveHardcodedItem() {
